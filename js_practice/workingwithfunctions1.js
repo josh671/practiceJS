@@ -118,3 +118,27 @@ function4_1 = (num4_1) =>{
 } 
 changed4_1 = function4_1(20); 
 //console.log(changed4_1); result: 4*20/8 = 10; 
+
+//stand in line 
+//que is abstract data structure where items are kept in order
+//new items added to back of q, old start at beginning
+//JSON.stringify : way to turn array into string that can be printed onto a screen 
+
+nextInLine = (arr, item) => { 
+    arr.push(item);
+    return arr.shift() ;
+}; 
+
+let nextInLineArray = [1, 2, 3, 4, 5, ]; 
+
+//console.log("before " + JSON.stringify(nextInLineArray));   result: before [1,2,3,4,5], before it gets shifted out
+//console.log(nextInLine(nextInLineArray, 6)); result : 1, because that is what shift is removing.
+//console.log("after " + JSON.stringify(nextInLineArray)); result: after [2,3,4,5,6], after 1 is shifted out. 
+
+//Boolean values are only true(on) or false(off); 
+welocomeToBooleans = () => { 
+    return false;
+}; 
+//console.log(welocomeToBooleans(7)); returns: false; 
+
+

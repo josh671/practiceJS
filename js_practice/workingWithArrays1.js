@@ -43,3 +43,50 @@ let array5 = [
     //ourdata6 = array5[3][0][2]; returns: 12; 
 
 // Manipulating arrays with push(); 
+let array6 = [ "Stimpson", "J", "cat", "dog", "carter"]; 
+//array6.push(["happy", "joy"]); //push adds to the end of the array; 
+//console.log(array6); Result: [ 'Stimpson', 'J', 'cat', 'dog', 'carter', [ 'happy', 'joy' ] ] 
+
+
+let ourdata6_1 = [ [1,2,3], ["human", "data"]]; 
+let key = "smitty"; 
+let star = "johnson";  
+array6.push(ourdata6_1, key, star); // adds to the end of the arrays
+
+let newObject = array6[5][1]; 
+
+//console.log(array6); result includes array plus star and key in array
+//console.log(newObject); [ 'human', 'data' ]
+
+//console.log(array6) 
+
+// Manipulating arrays with pop()
+let array7 = ["simpsons", "j", "cat"]; 
+let removedFromOurArray = array7.pop(); 
+
+//console.log(removedFromOurArray) result: cat, because pop removes last item in array
+//console.log(array7) result: [ 'simpsons', 'j' ], because cat was removed from array 
+let array8 = [["john", 23], ["cat", 2]]; 
+let removedFromOurArray1_1 = array8.pop(); 
+//console.log(removedFromOurArray1_1) [ 'cat', 2 ]
+//console.log(array8); because "cat", 2 was poped out [ [ 'john', 23 ] ]
+
+//manipulating arrays with shift 
+//removes the first element in the array instead of the final element or pop()
+let array9 = [ "stimpson", "j", ["cat"]]; 
+let shiftItem = array9.shift(); 
+//console.log(shiftItem); //"stimpson" was shifted out of array 
+//console.log(array9); // [ 'j', [ 'cat' ] ] is the result of new array; 
+
+//manipulating arrays with unshift(); 
+// adds element to the beginning of the array; 
+
+let shifItem2 = array9.unshift("johnson"); 
+console.log(array9); //result: [ 'johnson', 'j', [ 'cat' 
+//shift() removes first item in array, unshift() puts item at beginning of array.
+
+//nested arrays or arrays within an array. 
+let shoppingList = [["cereal", 3], ["milk", 2], ["bananas", 3] ["juice", 2]
+                    ["eggs", 12]]; 
+
+                    

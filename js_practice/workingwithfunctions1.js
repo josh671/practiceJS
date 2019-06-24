@@ -141,4 +141,3 @@ welocomeToBooleans = () => {
 }; 
 //console.log(welocomeToBooleans(7)); returns: false; 
 
-

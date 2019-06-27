@@ -107,4 +107,56 @@ switchOfStuff = (val) => {
 }  
 
 //console.log(switchOfStuff(1)); //returns stuff 
-//console.log(switchOfStuff("a"))// returns apple, input must be same data type.
+//console.log(switchOfStuff("a"))// returns apple, input must be same data type. 
+
+
+//MULTIPLE IDENTICAL OPTIONS IN SWITCH STATEMENTS
+//HOW TO GET OUTPUT WITH MULTIPLE INPUTS
+sequentialSizes = (val) =>{ 
+    let answer = ""; 
+    switch(val){ 
+        case 1: 
+        case 2: 
+        case 3: 
+            answer = "Low"; 
+        break; 
+        case 4: 
+        case 5: 
+        case 6: 
+            answer = "mid"; 
+        break; 
+        case 7: 
+        case 8: 
+        case 9: 
+            answer = "high"; 
+        break; 
+    }
+    return answer; 
+}
+
+//console.log(sequentialSizes(9)); returns high 
+
+//REPLACING IF ELSE CHAINS WITH SWITCH
+chainToSwithch=(val) =>{ 
+let answer = ""; 
+
+switch (val){ 
+    case "bob": 
+        answer = "marley"; 
+    break; 
+    case 42: 
+        answer = "The answer"; 
+    break;
+    case 1: 
+        answer = "there is no 1"; 
+    break;
+    case 99: 
+        answer = "Missed me by this much!"; 
+    break;
+    case 7: 
+        answer = "ate nine"; 
+    break;
+} 
+return answer;
+} 
+//console.log(chainToSwithch(7)) 

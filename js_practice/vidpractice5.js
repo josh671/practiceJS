@@ -96,9 +96,74 @@ let entreeValue = testObj2["an entree"]; //use brackets when key has space
 let sideValue = testObj2["my side"]; 
 //console.log(sideValue); // returns veggies
 let drinkValue = testObj2["the drink"]; 
-console.log(drinkValue); // returns water;  
+//console.log(drinkValue); // returns water;  
 
 //ACCESSING OBJECT PROPERTIES WITH VARIABLES 
-1.52.47 
-https://www.youtube.com/watch?v=PkZNo7MFNFg&t=1145s
 
+let testobj3 = { 
+    12: "new york", 
+    15: "montana", 
+    18: "los angelas", 
+}; 
+
+let newCity1 = 12; 
+let city = testobj3[newCity1]; 
+//console.log(city); returns new york because newCity1 has been set to 12 
+let newCity2 = 15; 
+let city2 = testobj3[newCity2]; 
+//console.log(city2) returns montana; 
+let newCity3 = 18; 
+let city3 = testobj3[newCity3] 
+//console.log(city3); returns los angelas because newCity3 has been set to 18; 
+
+//UPDATING OBJECT PROPERTIES
+//can use dot notation to update object properties
+let ourDog1 = {         //created dog object 
+    "name": "cooper", 
+    "legs": 4, 
+    "tails": 1, 
+    "friends": ["everything"] 
+} ; 
+ourDog1.bark = "bow-wow"; //adds bow-wow property with "bark" key:pair to ourDog1 object
+//console.log(ourDog1); 
+
+
+////ADDING NEW PROPERTIES TO OBJECT USING DOT OR BRAKET NOTATION
+let newDog = { 
+    "name": "happy coder", 
+    "tails": 1, 
+    "legs": 4, 
+    "friends": ["freeCodeCamp Campers"]
+}; 
+
+newDog.barklevel = "bow-wow-level-3";
+newDog.name = "maxine";//changed name of newDog object
+//console.log(newDog); 
+
+//dot notation
+newDog.type = "pitbull"; //adds type of dog to object using dot notation
+
+//braket notation
+newDog['bark'] = "wooof!"; 
+//console.log(newDog); adds new property to "newDog" using braket notation 
+//DELETING properties from an object using "delete key word" 
+delete newDog.tails; 
+//console.log(newDog); removes tails from dog Object; 
+
+
+//USING OBJECTS FOR LOOKUPS
+phoneticLookup = (val)=>{ 
+    let result = ""; 
+    let lookUp = { 
+        "alpha": "Adams", 
+        "bravo": "Boston", 
+        "charlie": "Chicago", 
+        "delta": "Denver", 
+        "echo": "Easy", 
+        "foxtrot" : "frank",
+    }; 
+    result = lookUp[val]; 
+    return result
+}
+console.log(phoneticLookup("bravo"));
+1.56.52

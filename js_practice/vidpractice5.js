@@ -162,8 +162,90 @@ phoneticLookup = (val)=>{
         "echo": "Easy", 
         "foxtrot" : "frank",
     }; 
-    result = lookUp[val]; 
+    result = lookUp[val]; //lookup is name of object, use bracket to pass in val to lookup; 
     return result
 }
-console.log(phoneticLookup("bravo"));
-1.56.52
+//console.log(phoneticLookup("bravo")); returns boston; 
+
+//TESTING OBJECTS FOR PROPERTIES
+let myObj = { 
+    gift: "pony", 
+    pet:"kitten", 
+    bed:"sleigh",
+}; 
+
+checkObj = (checkProp)=>{ 
+   if( myObj.hasOwnProperty(checkProp)){ //check value property with hasOwnProperty() we created
+       return myObj[checkProp];// return myObj prperty 
+   }else {
+    return "not found"; }
+}
+//console.log(checkObj("gift")); //property must be in quotes
+
+//MANIPULATING COMPLEX OBJECTS
+//OBJECTS CAN STORE ARRAYS, NUMBERS, OTHER OBJECTS 
+
+let myMusic = [
+    { //start of first object
+    "artist": "billy joel", 
+    "title": "piano Man", 
+    "release_year": 1973, 
+    "formats": [ 
+        "cd", 
+        "8t", 
+        "LP",
+    ], 
+    "gold": true, 
+    }, 
+    { //start of second object
+     "artist": "beau carnes", 
+     "title": "cereal man", 
+     "release_year": 2003, 
+     "formats": [ 
+         "youtube", 
+         "hulu", 
+         "spotify",
+     ]},
+]; 
+
+//ACCESSING NESTED OBJECTS OR OBJECTS WITHIN OBJECTS 
+let myStorage = { 
+    "car":{ 
+        "inside": { 
+            "glove box": 'maps', 
+            'passenger seat': 'crumbs',
+        },
+        'outside':{ 
+            'trunk': 'jack'
+        }
+    }
+}
+//trying to get glove box contents 
+let gloveBoxContents = myStorage.car.inside["glove box"];//accessing mystorageobject
+                                                        // than car object, to get to "globe box contents"
+                                                        // uses braket notation because there's space in glove box
+//console.log(gloveBoxContents) ; returns maps 
+
+//ACCESSING NESTED ARRAYS 
+let myPlants = [ 
+    { //start of first object
+        type: 'flowers', //key:value pairs
+        list: [ 'rose', 'tullip', 'dandelion']//key:value pair where value is array
+    },
+    { //start of second object 
+        type: 'trees', 
+        list: ['fir', 'pine', 'birch']
+    }
+];
+
+let secondTree = myPlants[1].list; 
+let firstObjArray = myPlants[0].list[2]; //retruns first object list, than returns third item in array 
+//console.log(secondTree)// returns the second objects list; 
+
+
+
+
+
+
+
+

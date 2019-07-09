@@ -148,5 +148,24 @@ let contacts = [
     },
 ];
 
-2.24.19
+lookUpProfileName = (name, prop)=>{ //pass in first name (sherlock) than property(number,likes), returns value matching key
+    for (let i = 0; i < contacts.length; i++){ //let i equal 0, i less than contacts.length, add increments of 1
+        if(contacts[i].firstName === name){ //checks if name exists; 
+            return contacts[i][prop] || 'no such porperty'//if name exists, returns property associated
+        } 
+    }
+    return "no such contact"
+}
+//console.log(lookUpProfileName('Akira', 'likes')) 
+
+lookUpNumber = (number, name) =>{ 
+    for (let i = 0; i < contacts.length; i++){ 
+       if (contacts[i].number === number){ 
+           return contacts[i][name] || 'does not exist';
+       }
+    }
+    return 'no such name';
+}
+//console.log(lookUpNumber('014523698', 'firstName')) result [ 'pizza', 'Coding', 'Brownie Points' ] Kristian 
+
 
